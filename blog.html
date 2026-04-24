@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Artsy Blog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <h2>Artsy</h2>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="add-post.html">Write</a>
+    <a href="saved.html">Saved</a>
+  </div>
+  <a href="profile.html" class="profile-btn">Profile</a>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <h1>Featured Blogs</h1>
+  <p>Discover ideas, tutorials & inspiration</p>
+</section>
+
+<!-- SEARCH + FILTER -->
+<div class="blog-controls">
+  <input placeholder="Search blog posts...">
+  
+  <div class="filters">
+    <button>All</button>
+    <button>Painting</button>
+    <button>Music</button>
+    <button>Writing</button>
+    <button>DIY</button>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="blog-layout">
+
+  <!-- LEFT : POSTS -->
+  <div id="posts" class="posts-grid">
+
+    
+
+  </div>
+
+  <!-- RIGHT : SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-card">
+      <h3>Trending Artists</h3>
+      <ul>
+        <li>🎨 Aanya Sharma</li>
+        <li>🖌️ Rohan Patel</li>
+        <li>📚 Meera Joshi</li>
+        <li>🎶 Kabir Shah</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Popular Tags</h3>
+      <div class="tags">
+        <span>#Painting</span>
+        <span>#Poetry</span>
+        <span>#Sketching</span>
+        <span>#DigitalArt</span>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- VIDEO LEARNING -->
+<section class="video-section">
+  <h2>Learn Through Videos</h2>
+  <div class="video-grid">
+    <iframe src="https://www.youtube.com/embed/1JJ9q2t6zGQ"></iframe>
+    <iframe src="https://www.youtube.com/embed/Wz6DrQeQ5rI"></iframe>
+    <iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g"></iframe>
+  </div>
+</section>
+
+<!-- FLOATING AI CHAT -->
+<div class="ai-chat">
+  <div class="ai-header">Artsy AI Assistant</div>
+  <div id="chatMessages"></div>
+  <div class="ai-input">
+    <input id="userInput" placeholder="Ask art ideas..." />
+    <button onclick="askAI()">Send</button>
+  </div>
+</div>
+
+<footer>Keep creating 🎨</footer>
+<script src="script.js"></script>
+
+<!-- BLOG READER MODAL -->
+<div id="blogModal" class="blog-modal">
+  <div class="blog-modal-content">
+    <span class="closeModal" onclick="closeBlog()">×</span>
+    <img id="modalImg">
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+
+</body>
+</html>

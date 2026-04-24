@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Read Blog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h2>Artsy</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blogs</a>
+    <a href="saved.html">Saved</a>
+  </div>
+  <a href="profile.html">Profile</a>
+</nav>
+
+<div class="read-container">
+
+  <img id="blogImage" class="read-img">
+
+  <h1 id="blogTitle"></h1>
+
+  <p id="blogContent" class="read-text"></p>
+
+  <a href="blog.html" class="back-btn">← Back to Blogs</a>
+
+</div>
+
+<footer>Keep creating 🎨</footer>
+
+<script>
+document.getElementById("blogTitle").innerText =
+  localStorage.getItem("blogTitle");
+
+document.getElementById("blogContent").innerText =
+  localStorage.getItem("blogText");
+
+document.getElementById("blogImage").src =
+  localStorage.getItem("blogImg");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Artsy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="nav">
+  <h2>Artsy</h2>
+  <div>
+    <a href="blog.html">Explore Blogs</a>
+    <a href="add-post.html">Write</a>
+  </div>
+  <a href="profile.html">Profile</a>
+</nav>
+
+<script>
+const nav = document.getElementById("navUser");
+const user = JSON.parse(localStorage.getItem("artsyUser"));
+const loggedIn = localStorage.getItem("loggedIn");
+
+if(loggedIn & user){
+  nav.innerHTML = `
+    <div class="auth-buttons">
+      <a href="profile.html" class="btn-login">${user.name}</a>
+      <a href="#" class="btn-signup" onclick="logout()">Logout</a>
+    </div>
+  `;
+}else{
+  nav.innerHTML = `
+    <div class="auth-buttons">
+      <a href="login.html" class="btn-login">Login</a>
+      <a href="signup.html" class="btn-signup">Sign Up</a>
+    </div>
+  `;
+}
+</script>
+
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Welcome to Artsy</h1>
+    <p>Create • Explore • Learn • Share</p>
+    <a href="blog.html" class="hero-btn">Explore Blogs</a>
+  </div>
+
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f" alt="art">
+  </div>
+</section>
+
+<section class="categories">
+  <h2>Explore Art Categories</h2>
+
+  <div class="category-grid">
+
+    <a href="blog.html" class="cat-card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <h3>Visual Arts</h3>
+    </a>
+
+    <a href="blog.html" class="cat-card">
+      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d">
+      <h3>Music</h3>
+    </a>
+
+    <a href="blog.html" class="cat-card">
+      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97">
+      <h3>Writing</h3>
+    </a>
+
+    <a href="blog.html" class="cat-card">
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+      <h3>DIY Crafts</h3>
+    </a>
+
+  </div>
+</section>
+<section class="featured">
+  <h2>Featured Post</h2>
+
+  <div class="featured-card">
+    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+
+    <div class="featured-text">
+      <h3>The Latest in Digital Illustration</h3>
+      <p>Explore tools, tips and creative workflows artists use today.</p>
+      <a href="blog.html" class="read-btn">Read Blog</a>
+    </div>
+  </div>
+</section>
+
+<section class="learn">
+  <h2>Learn Art with Videos</h2>
+
+  <div class="video-grid">
+
+    <iframe src="https://www.youtube.com/embed/1JJ9q2t6zGQ"></iframe>
+    <iframe src="https://www.youtube.com/embed/Wz6DrQeQ5rI"></iframe>
+    <iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g"></iframe>
+
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+  <h2>Ready to share your creativity?</h2>
+  <a href="add-post.html" class="primary-btn">Create your first post</a>
+</section>
+
+
+<script>
+const nav = document.getElementById("navUser");
+const user = JSON.parse(localStorage.getItem("artsyUser"));
+const loggedIn = localStorage.getItem("loggedIn");
+
+if(loggedIn && user){
+  nav.innerHTML = `
+    <a href="profile.html">${user.name}</a>
+    <a href="#" onclick="logout()">Logout</a>
+  `;
+}else{
+  nav.innerHTML = `
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  `;
+}
+<script src="auth.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const nav = document.getElementById("navUser");
+  const user = JSON.parse(localStorage.getItem("artsyUser"));
+  const loggedIn = localStorage.getItem("loggedIn");
+
+  if(!nav) return;
+
+  if(loggedIn && user){
+    nav.innerHTML = `
+      <div class="auth-buttons">
+        <a href="profile.html" class="btn-login">${user.name}</a>
+        <a href="#" class="btn-signup" onclick="logout()">Logout</a>
+      </div>
+    ;
+  }else{
+    nav.innerHTML = `
+      <div class="auth-buttons">
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="signup.html" class="btn-signup">Sign Up</a>
+      </div>
+    `;
+  }
+
+});
+</script>
+</body>
+</html>

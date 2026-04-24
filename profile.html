@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Profile • Artsy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <div><b>Artsy</b></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="profile.html">Profile</a>
+  </div>
+</nav>
+
+<div class="profile-cover"></div>
+
+<div class="container">
+
+  <div class="profile-card glass">
+      <img id="profilePic" src="https://i.pravatar.cc/200" class="profile-pic">
+
+      <h1 id="profileName" class="profile-name">Your Name</h1>
+      <p id="profileBio" class="profile-bio">
+        Digital creator, writer & aesthetic lover ✨
+      </p>
+
+      <button onclick="openEditor()">Edit Profile</button>
+  </div>
+
+<div id="myPosts" class="posts-grid"></div>
+</div>
+
+<!-- EDIT POPUP -->
+<div id="editor" class="editor hidden">
+  <div class="editor-box">
+      <h2>Edit Profile</h2>
+
+      <input id="nameInput" placeholder="Your name">
+      <textarea id="bioInput" placeholder="Your bio"></textarea>
+      <input id="imgInput" placeholder="Profile image URL">
+
+      <button onclick="saveProfile()">Save</button>
+      <button onclick="closeEditor()" class="secondary-btn">Cancel</button>
+  </div>
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>

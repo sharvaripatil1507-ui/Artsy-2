@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Post</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h2>Write a Blog</h2>
+  <a href="blog.html">Back</a>
+</nav>
+
+<div class="container">
+  <div class="formCard">
+ <h1>Share your art story ✨</h1>
+<p>Write something inspiring for the Artsy community.</p>
+
+<input id="title" placeholder="Blog title">
+
+<input id="author" placeholder="Your name">
+
+<input id="category" placeholder="Category (Painting, Poetry, etc.)">
+
+<input type="file" id="imageUpload" accept="image/*">
+
+<textarea id="content" rows="8"
+placeholder="Tell your story, share tips, or talk about your art journey...">
+</textarea>
+
+<button onclick="addPost()">Publish Blog 🎉</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+
+<script>
+// block page if not logged in
+const loggedIn = localStorage.getItem("loggedIn");
+
+if(!loggedIn){
+  alert("You must login to publish a blog.");
+  window.location.href = "login.html";
+}
+</script>
+
+
+</body>
+</html>
